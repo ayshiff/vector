@@ -14,9 +14,9 @@ pub(crate) use self::http::add_query_parameters;
 #[cfg(feature = "sources-prometheus")]
 pub(crate) use self::http::decode;
 #[cfg(any(feature = "sources-http", feature = "sources-datadog"))]
-pub(crate) use self::http::decode_body;
+pub(crate) use self::http::{decode_body, Encoding};
 #[cfg(feature = "sources-utils-http")]
-pub(crate) use self::http::{Encoding, ErrorMessage, HttpSource, HttpSourceAuthConfig};
+pub(crate) use self::http::{ErrorMessage, HttpSource, HttpSourceAuthConfig};
 pub use encoding_config::EncodingConfig;
 pub use multiline_config::MultilineConfig;
 #[cfg(all(feature = "sources-utils-tls", feature = "listenfd"))]
